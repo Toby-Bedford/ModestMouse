@@ -7,6 +7,8 @@ Functionality: a simple test program to get to know the MPLAB environment
 Change History:
                 2018-11-13    : Initial Release
 				2012-00-24	  : corrections for semester 2018/19
+
+"adding a comment to test gitgub" - harry
 */
 
 
