@@ -27,3 +27,16 @@ void __attribute__((interrupt, no_auto_psv)) _U2TXInterrupt(void) {
     IFS1bits.U2TXIF = 0;
 }
 
+void write_uart2(unsigned int input)
+{
+    while (U2STAbits.TRMT==0);                // Wait here while TRMT not clear
+    U2TXREG = input;                           
+   
+}
+
+void write_string_uart2(const char * str)
+{
+    while(*str) {                           // Loop untill null terminator is found
+        write_uart2(*str++);
+    }
+}
