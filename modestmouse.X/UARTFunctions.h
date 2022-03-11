@@ -14,6 +14,9 @@ extern "C" {
 
 void UART2Setup(void);
 
+void write_uart2(unsigned int input);
+void write_string_uart2(const char * str);
+
 #ifdef	__cplusplus
 }
 #endif
