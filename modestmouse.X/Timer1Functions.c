@@ -2,13 +2,16 @@
 #include "Timer1Functions.h"
 #include "IOSetup.h"
 
+// Remove for final version. Uses lots of mem.
+#include <stdio.h>
+
 
 
 void Timer1Setup(void){
     T1CONbits.TON = 0; // Disable timer module
     TMR1 = 0;
-    T1CONbits.TCKPS = 0b01; // Sets pre-scaler to 1:8
-    PR1 = 19998;
+    T1CONbits.TCKPS = 0; // Sets pre-scaler to 1:8
+    PR1 = 160;
     T1CONbits.TCS = 0;
     T1CONbits.TSYNC = 0;
     T1CONbits.TSIDL = 1;
@@ -19,16 +22,38 @@ void Timer1Setup(void){
     T1CONbits.TON = 1; // Enable timer module
 }
 
-void __attribute__((interrupt, auto_psv)) _T1Interrupt(void) {
-    IFS0bits.T1IF = 0;
-    TMR1 = 0;
+char char1[9] = "its high\n\n";
+char char2[9] = "its low\n\n";
+
+void __attribute__((__interrupt__, __auto_psv__)) _T1Interrupt(void)  {
+
+    TRIG_lat = 0;
+    //__delay_ms(200);
+    TRIG_lat = 1;
     LED2LAT = ~LED2LAT;
-    static int timer_counter = 0;
-    if (timer_counter >= 49) {
-        timer_counter = 0;
-        LED3PORT = ~LED3PORT;
-    } else {
-        timer_counter++;
+    char test1[9];
+    //__delay_ms(7);
+    sprintf(test1,"%d",ECHO_port);
+    write_string_uart2(test1);
+    
+    /*
+    
+    if (ECHO_port == 1)
+    {
+
+        write_string_uart2(char1);
+ }
+    
+    else if (ECHO_port == 0)
+    {
+
+        write_string_uart2(char2);
+        __delay_ms(10);
     }
+    */
+    
+    
+    IFS0bits.T1IF = 0; 
+    //write_string_uart2(char1);
 }
 

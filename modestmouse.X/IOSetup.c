@@ -11,6 +11,11 @@ void GPIOSetup(){
     LED4TRIS = 0;
     LED4PORT = 0;
     
+    // MOTOR pins
     PIN37TRIS = 0;
     PIN36TRIS = 0;
+    
+    // Ultrasonic pins
+    TRIG_tris = 0;  // trigger output
+    ECHO_tris = 1;  // echo inpu
 }

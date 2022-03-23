@@ -31,15 +31,24 @@ extern "C" {
 #define LED4PORT PORTEbits.RE0
 #define LED4TRIS TRISEbits.TRISE0
 #define LED4LAT LATEbits.LATE0
+    
+// 23/03/2022
+// Switched motors pins to from RB7 --> RB5 & RB8 --> RB6
+#define PIN37PORT PORTBbits.RB5
+#define PIN37TRIS TRISBbits.TRISB5
+#define PIN37LAT LATBbits.LATB5
+    
+#define PIN36PORT PORTBbits.RB6
+#define PIN36TRIS TRISBbits.TRISB6
+#define PIN36LAT LATBbits.LATB6
 
-#define PIN37PORT PORTBbits.RB7
-#define PIN37TRIS TRISBbits.TRISB7
-#define PIN37LAT LATBbits.LATB7
-    
-#define PIN36PORT PORTBbits.RB8
-#define PIN36TRIS TRISBbits.TRISB8
-#define PIN36LAT LATBbits.LATB8
-    
+// Added setup pins for ultrasonic sensor.
+#define ECHO_tris TRISBbits.TRISB7
+#define ECHO_port PORTBbits.RB7
+
+#define TRIG_tris TRISBbits.TRISB8
+#define TRIG_lat LATBbits.LATB8
+ 
 
 void GPIOSetup(void);
     
