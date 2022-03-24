@@ -95,86 +95,86 @@ MP_LINKER_FILE_OPTION=,--script=p30F4011.gld
 # ------------------------------------------------------------------------------------
 # Rules for buildStep: compile
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
-${OBJECTDIR}/ADCsetup.o: ADCsetup.c  .generated_files/419ae6280328e0e9928582d539af5226c624037e.flag .generated_files/a0910c61d8398c05e5fc9707edb20c278ecd30a6.flag
+${OBJECTDIR}/ADCsetup.o: ADCsetup.c  .generated_files/flags/default/5e72f4bf0581c61ca4f6ea9e7ef694367f5ef0cb .generated_files/flags/default/daee4ddb523c8e0e0c4f89c94cca721209ec10c
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/ADCsetup.o.d 
 	@${RM} ${OBJECTDIR}/ADCsetup.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE)  ADCsetup.c  -o ${OBJECTDIR}/ADCsetup.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/ADCsetup.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_SIMULATOR=1    -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
 	
-${OBJECTDIR}/IOSetup.o: IOSetup.c  .generated_files/299765f790d984b96b58a6eaf8cca866a3d09aac.flag .generated_files/a0910c61d8398c05e5fc9707edb20c278ecd30a6.flag
+${OBJECTDIR}/IOSetup.o: IOSetup.c  .generated_files/flags/default/f89228a8cd1da76a751a0a6c049bda4da503cec2 .generated_files/flags/default/daee4ddb523c8e0e0c4f89c94cca721209ec10c
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/IOSetup.o.d 
 	@${RM} ${OBJECTDIR}/IOSetup.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE)  IOSetup.c  -o ${OBJECTDIR}/IOSetup.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/IOSetup.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_SIMULATOR=1    -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
 	
-${OBJECTDIR}/PWMFunctions.o: PWMFunctions.c  .generated_files/a68281faeb60e11baa2f73de120141b95f2e816a.flag .generated_files/a0910c61d8398c05e5fc9707edb20c278ecd30a6.flag
+${OBJECTDIR}/PWMFunctions.o: PWMFunctions.c  .generated_files/flags/default/5e5e552716971a3eda0e7eed5542202609683cbc .generated_files/flags/default/daee4ddb523c8e0e0c4f89c94cca721209ec10c
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/PWMFunctions.o.d 
 	@${RM} ${OBJECTDIR}/PWMFunctions.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE)  PWMFunctions.c  -o ${OBJECTDIR}/PWMFunctions.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/PWMFunctions.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_SIMULATOR=1    -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
 	
-${OBJECTDIR}/QEIFunctions.o: QEIFunctions.c  .generated_files/c05fbd643dfeba9f70838e11fa99bbb3b277fffc.flag .generated_files/a0910c61d8398c05e5fc9707edb20c278ecd30a6.flag
+${OBJECTDIR}/QEIFunctions.o: QEIFunctions.c  .generated_files/flags/default/4697ffb064a7378f635689e45ff81bc87dcaa554 .generated_files/flags/default/daee4ddb523c8e0e0c4f89c94cca721209ec10c
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/QEIFunctions.o.d 
 	@${RM} ${OBJECTDIR}/QEIFunctions.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE)  QEIFunctions.c  -o ${OBJECTDIR}/QEIFunctions.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/QEIFunctions.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_SIMULATOR=1    -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
 	
-${OBJECTDIR}/Timer1Functions.o: Timer1Functions.c  .generated_files/44ac7809443f8d4f67624fa46af480894abc2913.flag .generated_files/a0910c61d8398c05e5fc9707edb20c278ecd30a6.flag
+${OBJECTDIR}/Timer1Functions.o: Timer1Functions.c  .generated_files/flags/default/5921000024791e77a71ea753de502962f634e2ea .generated_files/flags/default/daee4ddb523c8e0e0c4f89c94cca721209ec10c
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/Timer1Functions.o.d 
 	@${RM} ${OBJECTDIR}/Timer1Functions.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE)  Timer1Functions.c  -o ${OBJECTDIR}/Timer1Functions.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/Timer1Functions.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_SIMULATOR=1    -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
 	
-${OBJECTDIR}/UARTFunctions.o: UARTFunctions.c  .generated_files/e69a165066de25dc5508dc3e2168c24aa3423978.flag .generated_files/a0910c61d8398c05e5fc9707edb20c278ecd30a6.flag
+${OBJECTDIR}/UARTFunctions.o: UARTFunctions.c  .generated_files/flags/default/baf55d1b8e8ca4a17760c1945befe50bb4e4a6a5 .generated_files/flags/default/daee4ddb523c8e0e0c4f89c94cca721209ec10c
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/UARTFunctions.o.d 
 	@${RM} ${OBJECTDIR}/UARTFunctions.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE)  UARTFunctions.c  -o ${OBJECTDIR}/UARTFunctions.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/UARTFunctions.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_SIMULATOR=1    -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
 	
-${OBJECTDIR}/main.o: main.c  .generated_files/54bb6b3aa5aff851940bd8f5b3e3f2eab560ada3.flag .generated_files/a0910c61d8398c05e5fc9707edb20c278ecd30a6.flag
+${OBJECTDIR}/main.o: main.c  .generated_files/flags/default/99fa648d757053c3fb65985a6aa0b4fd41726010 .generated_files/flags/default/daee4ddb523c8e0e0c4f89c94cca721209ec10c
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/main.o.d 
 	@${RM} ${OBJECTDIR}/main.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE)  main.c  -o ${OBJECTDIR}/main.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/main.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_SIMULATOR=1    -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
 	
 else
-${OBJECTDIR}/ADCsetup.o: ADCsetup.c  .generated_files/f145ae4dc5a7467b01d0e0176bc0d5ef7452dbc5.flag .generated_files/a0910c61d8398c05e5fc9707edb20c278ecd30a6.flag
+${OBJECTDIR}/ADCsetup.o: ADCsetup.c  .generated_files/flags/default/28dd4041d7bbe2b2371a2c27657ee04dfed885f6 .generated_files/flags/default/daee4ddb523c8e0e0c4f89c94cca721209ec10c
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/ADCsetup.o.d 
 	@${RM} ${OBJECTDIR}/ADCsetup.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE)  ADCsetup.c  -o ${OBJECTDIR}/ADCsetup.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/ADCsetup.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
 	
-${OBJECTDIR}/IOSetup.o: IOSetup.c  .generated_files/9d80b81c95468e845e4176b4447c81a7d347960d.flag .generated_files/a0910c61d8398c05e5fc9707edb20c278ecd30a6.flag
+${OBJECTDIR}/IOSetup.o: IOSetup.c  .generated_files/flags/default/37ef7b592aa32b801e703bb3859b64372d0702ff .generated_files/flags/default/daee4ddb523c8e0e0c4f89c94cca721209ec10c
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/IOSetup.o.d 
 	@${RM} ${OBJECTDIR}/IOSetup.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE)  IOSetup.c  -o ${OBJECTDIR}/IOSetup.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/IOSetup.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
 	
-${OBJECTDIR}/PWMFunctions.o: PWMFunctions.c  .generated_files/cc2353d68889e8ec8e14c6b29113cf9aa19f2975.flag .generated_files/a0910c61d8398c05e5fc9707edb20c278ecd30a6.flag
+${OBJECTDIR}/PWMFunctions.o: PWMFunctions.c  .generated_files/flags/default/d46edf77b29ea334840c6e4d9a9a39875a518d07 .generated_files/flags/default/daee4ddb523c8e0e0c4f89c94cca721209ec10c
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/PWMFunctions.o.d 
 	@${RM} ${OBJECTDIR}/PWMFunctions.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE)  PWMFunctions.c  -o ${OBJECTDIR}/PWMFunctions.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/PWMFunctions.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
 	
-${OBJECTDIR}/QEIFunctions.o: QEIFunctions.c  .generated_files/820552d94bab21d3a4c1b24e6697d42e5f982caa.flag .generated_files/a0910c61d8398c05e5fc9707edb20c278ecd30a6.flag
+${OBJECTDIR}/QEIFunctions.o: QEIFunctions.c  .generated_files/flags/default/95f0f73b65bbc9ced41852aeae337473f544b936 .generated_files/flags/default/daee4ddb523c8e0e0c4f89c94cca721209ec10c
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/QEIFunctions.o.d 
 	@${RM} ${OBJECTDIR}/QEIFunctions.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE)  QEIFunctions.c  -o ${OBJECTDIR}/QEIFunctions.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/QEIFunctions.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
 	
-${OBJECTDIR}/Timer1Functions.o: Timer1Functions.c  .generated_files/edf0dbeabb10158886e5b5b9e3e840fdcab0d0ae.flag .generated_files/a0910c61d8398c05e5fc9707edb20c278ecd30a6.flag
+${OBJECTDIR}/Timer1Functions.o: Timer1Functions.c  .generated_files/flags/default/523a7fc154db8bc028501537d49dc6ffa02f48a5 .generated_files/flags/default/daee4ddb523c8e0e0c4f89c94cca721209ec10c
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/Timer1Functions.o.d 
 	@${RM} ${OBJECTDIR}/Timer1Functions.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE)  Timer1Functions.c  -o ${OBJECTDIR}/Timer1Functions.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/Timer1Functions.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
 	
-${OBJECTDIR}/UARTFunctions.o: UARTFunctions.c  .generated_files/1ff31ac3001f98acc5468e1e96a0eaacbed1a45e.flag .generated_files/a0910c61d8398c05e5fc9707edb20c278ecd30a6.flag
+${OBJECTDIR}/UARTFunctions.o: UARTFunctions.c  .generated_files/flags/default/8822334d0affe1bdb8c5bdf592f91334c7ed726b .generated_files/flags/default/daee4ddb523c8e0e0c4f89c94cca721209ec10c
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/UARTFunctions.o.d 
 	@${RM} ${OBJECTDIR}/UARTFunctions.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE)  UARTFunctions.c  -o ${OBJECTDIR}/UARTFunctions.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/UARTFunctions.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
 	
-${OBJECTDIR}/main.o: main.c  .generated_files/e2a366a4bf0f6bf0e7d9d53af619c73a909a3ce2.flag .generated_files/a0910c61d8398c05e5fc9707edb20c278ecd30a6.flag
+${OBJECTDIR}/main.o: main.c  .generated_files/flags/default/344f771b4817617908a9ab309c41f90bb245cf20 .generated_files/flags/default/daee4ddb523c8e0e0c4f89c94cca721209ec10c
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/main.o.d 
 	@${RM} ${OBJECTDIR}/main.o 
