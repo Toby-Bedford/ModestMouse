@@ -5,13 +5,11 @@
 // Remove for final version. Uses lots of mem.
 #include <stdio.h>
 
-
-
 void Timer1Setup(void){
     T1CONbits.TON = 0; // Disable timer module
     TMR1 = 0;
-    T1CONbits.TCKPS = 0; // Sets pre-scaler to 1:8
-    PR1 = 160;
+    T1CONbits.TCKPS = 2; // Sets pre-scaler to 1:8
+    PR1 = 19999;
     T1CONbits.TCS = 0;
     T1CONbits.TSYNC = 0;
     T1CONbits.TSIDL = 1;
@@ -21,39 +19,27 @@ void Timer1Setup(void){
     IEC0bits.T1IE = 1; // Enable interrupt
     T1CONbits.TON = 1; // Enable timer module
 }
-
-char char1[9] = "its high\n\n";
-char char2[9] = "its low\n\n";
-
 void __attribute__((__interrupt__, __auto_psv__)) _T1Interrupt(void)  {
 
-    TRIG_lat = 0;
-    //__delay_ms(200);
-    TRIG_lat = 1;
-    LED2LAT = ~LED2LAT;
-    char test1[9];
-    //__delay_ms(7);
-    sprintf(test1,"%d",ECHO_port);
-    write_string_uart2(test1);
-    
-    /*
-    
-    if (ECHO_port == 1)
-    {
-
-        write_string_uart2(char1);
- }
-    
-    else if (ECHO_port == 0)
-    {
-
-        write_string_uart2(char2);
-        __delay_ms(10);
-    }
-    */
-    
-    
     IFS0bits.T1IF = 0; 
-    //write_string_uart2(char1);
+    trigPin = 0;
+    __delay_ms(5);
+    trigPin = 1;
+    __delay_ms(10);
+    trigPin = 0;
+    int duration = 0;
+    char SensorCm[9];
+    //char test1[9];
+    float cm;
+    while(echoPin == 0){
+    }
+    while(echoPin == 1){
+        duration++;
+    }
+    //sprintf(test1,"%d\n",duration);
+    //sendStringUART(test1);
+    cm = duration/170.0;
+    sprintf(SensorCm,"%.2fcm\n",cm);
+    write_string_uart2(SensorCm);
 }
 

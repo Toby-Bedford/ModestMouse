@@ -17,5 +17,5 @@ void GPIOSetup(){
     
     // Ultrasonic pins
     TRIG_tris = 0;  // trigger output
-    ECHO_tris = 1;  // echo inpu
+    ECHO_tris = 1;  // echo input
 }

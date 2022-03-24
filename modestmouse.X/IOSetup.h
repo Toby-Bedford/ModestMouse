@@ -8,6 +8,9 @@
 #ifndef IOSETUP_H
 #define	IOSETUP_H
 
+#include "p30F4011.h"
+
+
 #ifdef	__cplusplus
 extern "C" {
 #endif
@@ -43,11 +46,11 @@ extern "C" {
 #define PIN36LAT LATBbits.LATB6
 
 // Added setup pins for ultrasonic sensor.
+#define echoPin PORTBbits.RB7
 #define ECHO_tris TRISBbits.TRISB7
-#define ECHO_port PORTBbits.RB7
-
+    
 #define TRIG_tris TRISBbits.TRISB8
-#define TRIG_lat LATBbits.LATB8
+#define trigPin LATBbits.LATB8
  
 
 void GPIOSetup(void);
